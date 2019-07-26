@@ -6,3 +6,6 @@ class MainPageLocators(object):
 class LoginPageLocators(object):
     LOGIN_FORM = (By.ID, "login_form")
     REGISTER_FORM = (By.CLASS_NAME, "login_form")
+    
+class ProductPageLocators(object):
+    ADD_TO_BASKET_BUTTON = (By.CLASS_NAME, "btn-add-to-basket")
