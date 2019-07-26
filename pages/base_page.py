@@ -1,5 +1,6 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException 
+import math
 
 class BasePage(object):
     def __init__(self, browser, url):
