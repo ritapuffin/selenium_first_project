@@ -15,3 +15,9 @@ class BasePage(object):
         except (NoSuchElementException):
             return False
         return True
+        
+    def is_url_contains_correct_substring(self, substring_to_search):
+        if substring_to_search in self.browser.current_url:
+            return True
+        return False
+        
