@@ -12,3 +12,4 @@ class ProductPageLocators(object):
     PRICE = (By.CSS_SELECTOR, ".product_main .price_color")#.alertinner strong:nth-child(1)
     NAME = (By.CSS_SELECTOR, "#content_inner h1")
     ALERT_ADDED = (By.CSS_SELECTOR, ".alertinner strong")
+    SUCCESS_MESSAGE = (By.CLASS_NAME, "alert-success")

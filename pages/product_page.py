@@ -24,3 +24,9 @@ class ProductPage(BasePage):
         price_added = elements[2].text
         assert name_added == name, "Incorrect alert message! Should be {} instead of {}".format(name, name_added)
         assert price_added == price, "Incorrect alert message! Should be {} instead of {}".format(price, price_added)
+        
+    def should_not_be_success_message(self):
+        assert not self.is_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented"
+        
+    def success_message_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message has not disappeared"
