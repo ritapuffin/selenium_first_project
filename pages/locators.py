@@ -14,7 +14,7 @@ class LoginPageLocators(object):
     
 class ProductPageLocators(object):
     ADD_TO_BASKET_BUTTON = (By.CLASS_NAME, "btn-add-to-basket")
-    PRICE = (By.CSS_SELECTOR, ".product_main .price_color")#.alertinner strong:nth-child(1)
+    PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     NAME = (By.CSS_SELECTOR, "#content_inner h1")
     ALERT_ADDED = (By.CSS_SELECTOR, ".alertinner strong")
     SUCCESS_MESSAGE = (By.CLASS_NAME, "alert-success")
@@ -22,9 +22,9 @@ class ProductPageLocators(object):
 class BasePageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
-    BASKET_BUTTON = (By.PARTIAL_LINK_TEXT, "basket")
+    BASKET_BUTTON = (By.CSS_SELECTOR, ".basket-mini .btn")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
     
 class CartPageLocators(object):
-    EMPTY_MESSAGES = {"en" : "Your basket is empty.", "en-gb" : "Your basket is empty.", "ru" : "Ваша корзина пуста"}
+    EMPTY_MESSAGES = ("Your basket is empty.", "Ваша корзина пуста")
     GOOD_ITEM = (By.CLASS_NAME, "basket-items")
