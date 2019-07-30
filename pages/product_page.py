@@ -18,7 +18,7 @@ class ProductPage(BasePage):
     def get_product_price(self):
         return self.browser.find_element(*ProductPageLocators.PRICE).text
         
-    def product_added_message(self, name, price):
+    def check_product_added_message(self, name, price):
         elements = self.browser.find_elements(*ProductPageLocators.ALERT_ADDED)
         name_added = elements[0].text
         price_added = elements[2].text

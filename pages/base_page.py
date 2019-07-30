@@ -19,7 +19,7 @@ class BasePage(object):
     def open(self): 
         self.browser.get(self.url)
         
-    def go_to_basket(self):
+    def view_basket(self):
         link = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
         link.click()
     
@@ -51,7 +51,11 @@ class BasePage(object):
     def is_url_contains_correct_substring(self, substring_to_search):
         if substring_to_search in self.browser.current_url:
             return True
-        return False
+        return False        
+        
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                 " probably unauthorised user"
         
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
