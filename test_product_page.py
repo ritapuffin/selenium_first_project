@@ -5,7 +5,7 @@ from pages.base_page import BasePage
 
 import time
 import pytest
-import faker
+import faker # should be installed (see requirements.txt)
 
 '''
 @pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
